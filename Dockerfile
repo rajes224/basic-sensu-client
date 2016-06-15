@@ -1,5 +1,5 @@
 FROM nuancemobility/ubuntu-base:14.04 
-MAINTAINER Brice Argenson <brice.argenson@nuance.com> 
+MAINTAINER Rajesh Salian <rajesh.salian@nuance.com> 
 
 # Install Sensu 
 RUN 		curl http://repos.sensuapp.org/apt/pubkey.gpg | apt-key add - && \
