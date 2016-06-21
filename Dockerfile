@@ -10,7 +10,7 @@ RUN 		curl http://repos.sensuapp.org/apt/pubkey.gpg | apt-key add - && \
 RUN 		apt-get install -y ruby build-essential chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 \
 			libfontconfig1-dev nodejs-legacy nodejs npm && npm install phantomjs && \
 			mv /node_modules/phantomjs /usr/local/share && ln -sf /usr/local/share/phantomjs/bin/phantomjs /usr/local/bin/ && \
-			apt-get install python3-pip && pip3 install -U selenium && pip3 install requests
+			apt-get install -y python3-pip && pip3 install -U selenium && pip3 install requests
 COPY docker-entrypoint.sh /
 VOLUME 		/etc/sensu/conf.d
 VOLUME 		/etc/sensu/plugins
