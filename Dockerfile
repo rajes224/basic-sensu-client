@@ -15,7 +15,10 @@ RUN 		apt-get install -y ruby build-essential
 RUN		apt-get install -y python3-pip && pip3 install -U selenium && pip3 install requests
 		
 # Install Nagios plugins
-RUN		apt-get -y install nagios-plugins		
+RUN		apt-get -y install nagios-plugins
+
+# Install SNMP libraries
+RUN		apt-get -y install snmp snmp-mibs-downloader
 			
 # Install PhantomJS
 RUN		apt-get install -y chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 && \
